@@ -18,7 +18,6 @@
     "css-loader": "^5.0.1",
     "moment": "^2.29.1",
     "vue": "^2.6.12",
-    "vue-infinite-scroll": "^2.0.2",
     "vue-loader": "^15.9.5"
   },
   "devDependencies": {
@@ -54,4 +53,3 @@
     "last 2 versions"
   ]
 }
-

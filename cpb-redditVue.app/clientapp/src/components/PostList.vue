@@ -1,12 +1,11 @@
 <template>
     <div class="postList">
+        <!-- bootstrap navbar -->
         <b-navbar class="py-1" type="dark" fixed="top" variant="dark" toggleable="lg" sticky>
             <b-navbar-brand id="navbar-brand" href="#">{{ title }}</b-navbar-brand>
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
                     <b-nav-form @submit.prevent="doSearch">
-                        <!--<button v-on:click="getMorePosts">get more</button>-->
                         <label class="mr-sm-2" for="subDropDown">Viewing:</label>
                         <b-form-select id="subDropDown" v-model="selectedSub" :options="subredditSelectList" @change="refresh">
                             <b-form-select-option value="earthporn">r/earthporn</b-form-select-option>
@@ -19,19 +18,20 @@
                         <b-button variant="secondary" @click="resetSearch">Reset</b-button>
                     </b-nav-form>
                 </b-navbar-nav>
-                <b-navbar-nav class="ml-auto">
-                    <div v-show="loggedInUsername == ''">
-                        <a href="/signin">Log In to view your subs!</a>
-                    </div>
-                    <div v-show="loggedInUsername != ''"><a href="/signout">{{ loggedInUsername }} Logged In (Log Out)</a></div>
-                </b-navbar-nav>
             </b-collapse>
+            <b-navbar-nav>
+                <div v-show="loggedInUsername == ''">
+                    <a href="/signin">Log In to view your subs!</a>
+                </div>
+                <div v-show="loggedInUsername != ''">{{ loggedInUsername }} <a href="/signout">(Log Out)</a></div>
+            </b-navbar-nav>
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         </b-navbar>
-        
+
         <b-alert :show="loading" variant="secondary">Loading...</b-alert>
         <b-alert :show="error" variant="danger">An error has occurred</b-alert>
 
-        <div v-infinite-scroll="getMorePosts" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
+        <div id="itemContainer">
             <div class="grid">
                 <!-- items -->
                 <a v-bind:title="post.title"
@@ -166,8 +166,16 @@
             errorHandler() {
                 this.loading = false;
                 this.error = true;
-            }
-                
+            },
+            setupScroll() {
+                window.onscroll = async () => {
+                    let atBottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight) === document.documentElement.offsetHeight;
+
+                    if (atBottomOfWindow && !this.loading) {
+                        await this.getMorePosts();
+                    }
+                };
+            },
         },
         async created() {
             await this.getAccountInfo();
@@ -175,6 +183,7 @@
         },
         mounted() {
             window.addEventListener("resize", this.resizeGrid);
+            this.setupScroll();
         }
     }
 </script>

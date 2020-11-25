@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="clientapp\clientApp\**" />
     <Compile Remove="cpb-redditVue.tests\**" />
-    <Content Remove="cpb-redditVue.tests\**" />
+    <EmbeddedResource Remove="clientapp\clientApp\**" />
     <EmbeddedResource Remove="cpb-redditVue.tests\**" />
+    <None Remove="clientapp\clientApp\**" />
     <None Remove="cpb-redditVue.tests\**" />
   </ItemGroup>
 
