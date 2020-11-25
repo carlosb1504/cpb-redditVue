@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cpb-redditVue.tests", "cpb-redditVue.tests\cpb-redditVue.tests.csproj", "{D5B05D50-C723-4020-A54E-6EF584DC280B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cpb-redditVue.AuthTokenRetriever", "cpb-redditVue.AuthTokenRetriever\cpb-redditVue.AuthTokenRetriever.csproj", "{F9900CEE-5366-4BA1-9838-C3CF1B3C2779}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cpb-redditVue.dal", "cpb-redditVue.dal\cpb-redditVue.dal.csproj", "{D9218D44-C630-46BD-A9C0-C903B6802471}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cpb-redditVue.app", "cpb-redditVue.app\cpb-redditVue.app.csproj", "{58529E28-3BE3-47B4-A40D-08EDB43E4E17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5B05D50-C723-4020-A54E-6EF584DC280B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B05D50-C723-4020-A54E-6EF584DC280B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B05D50-C723-4020-A54E-6EF584DC280B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B05D50-C723-4020-A54E-6EF584DC280B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9900CEE-5366-4BA1-9838-C3CF1B3C2779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9900CEE-5366-4BA1-9838-C3CF1B3C2779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9900CEE-5366-4BA1-9838-C3CF1B3C2779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9900CEE-5366-4BA1-9838-C3CF1B3C2779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9218D44-C630-46BD-A9C0-C903B6802471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9218D44-C630-46BD-A9C0-C903B6802471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9218D44-C630-46BD-A9C0-C903B6802471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9218D44-C630-46BD-A9C0-C903B6802471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58529E28-3BE3-47B4-A40D-08EDB43E4E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58529E28-3BE3-47B4-A40D-08EDB43E4E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58529E28-3BE3-47B4-A40D-08EDB43E4E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58529E28-3BE3-47B4-A40D-08EDB43E4E17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E01AFFC-3FFF-4A49-8D5C-4D254FBA8B47}
+	EndGlobalSection
+EndGlobal

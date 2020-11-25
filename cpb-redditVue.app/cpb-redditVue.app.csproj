@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>cpb_redditVue.app</RootNamespace>
+    <AssemblyName>cpb-redditVue.app</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="cpb-redditVue.tests\**" />
+    <Content Remove="cpb-redditVue.tests\**" />
+    <EmbeddedResource Remove="cpb-redditVue.tests\**" />
+    <None Remove="cpb-redditVue.tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNet.Security.OAuth.Reddit" Version="3.1.6" />
+    <PackageReference Include="VueCliMiddleware" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cpb-redditVue.dal\cpb-redditVue.dal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="clientapp\src\assets\css\bootstrap.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="clientapp\src\assets\css\masonry.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+</Project>
