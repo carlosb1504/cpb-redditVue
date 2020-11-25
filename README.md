@@ -2,6 +2,7 @@
 
 **VueReddit** is a simple tool for browsing your favourite **[Reddit](https://www.reddit.com/)** subs.
 
+See it running here: https://vuereddit.azurewebsites.net/
 
 ## Features
 
@@ -30,6 +31,8 @@
  3. Open a command prompt at the subdirectory of the app project (cpb-redditVue.app\clientapp)
  4. Run ```npm build``` to download vue and all of the js dependencies
  5. Run the cpb-redditVue.app project and browse to the root URL
+
+ N.B.: Please note that to get oauth to work locally, a custom appId / secret will need to be supplied via appsettings.json
 
 ## Running Tests
 

@@ -18,9 +18,12 @@ namespace cpb_redditVue.dal.Services
 
         public IEnumerable<PostDetail> GetSubredditPosts(string name, Enums.PostsCategory category = Enums.PostsCategory.TOP, string after = "")
         {
+            // Get the named subreddit
             var subReddit = this.RedditClient.Subreddit(name);
+
             IEnumerable<PostDetail> posts;
 
+            // Get the requested category of posts, 'after' is the id of the last post we saw, for pagination purposes.
             switch (category)
             {
                 case Enums.PostsCategory.HOT:

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 namespace cpb_redditVue.dal.Helpers
 {
+    // Utility methods for casting betwen Reddit.NET classes, and our own custom POCOs for use by our API controller methods.
+
     public static class RedditDotNetAccountExtensionMethods
     {
         public static AccountDetail ToRedditAccountDetail(this Account redditDotNetAccount)
@@ -55,6 +57,7 @@ namespace cpb_redditVue.dal.Helpers
 
                 try
                 {
+                    // Image URL is a JObject so might throw an error if the requested property is null (e.g. text-only posts)
                     newPostDetail.ImageURL = post.Listing.Preview["images"][0]["source"].Value<string>("url");
                 }
                 catch (NullReferenceException)
