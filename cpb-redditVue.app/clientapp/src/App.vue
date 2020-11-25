@@ -13,6 +13,9 @@
         name: 'app',
         components: {
             PostList
+        },
+        data: function () {
+            return {};
         }
     }
 </script>
