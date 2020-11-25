@@ -12,27 +12,27 @@ See it running here: https://vuereddit.azurewebsites.net/
 
 * Infinite scroll
 
-* front end framework provided by **[VueJS](https://vuejs.org/)**
+* Front end framework provided by **[VueJS](https://vuejs.org/)**
 
-*  **[ASP.NET Core 3.1](https://github.com/dotnet/aspnetcore)** for data access and API layers.
+* **[ASP.NET Core 3.1](https://github.com/dotnet/aspnetcore)** for data access and API layers
 
-* Login and integration to Reddit provided by OAuth2 challenge
+* Login and integration to Reddit via OAuth2 challenge
 
 ## Known issues & future enhancements
 
-* Infinite scroll feature currently capped at 100 posts on screen at any one time. Optimization required to increase this.
-* Reddit oauth challenge possibly picked up by Reddit app, if installed, on Android devices, with mixed results. Is intermittent, Investigation required
-* Safari on iPhone/iPad zooms into the viewport very slightly when textboxes are selected, makes the sides of the posts sppear to clip unless the view is 'pinched' back out again.
+* Infinite scroll feature currently capped at 100 posts on screen at any one time. Optimize and increase this.
+* Reddit oauth challenge processed up by the Reddit app, if installed, on Android devices with mixed results. Is intermittent, Investigation required
+* Safari on iPhone/iPad zooms into the viewport very slightly when textboxes are selected. This makes the sides of the posts sppear to clip unless the viewport is 'pinched' back out again.
 
 ## Setting up to run in DEV
 
  1. Open up the .sln file 
  2. Build all the projects
- 3. Open a command prompt at the subdirectory of the app project (cpb-redditVue.app\clientapp)
- 4. Run ```npm build``` to download vue and all of the js dependencies
- 5. Run the cpb-redditVue.app project and browse to the root URL
+ 3. Open a command prompt at the subdirectory of the Vue application (cpb-redditVue.app\clientapp)
+ 4. Run ```npm build``` to download Vue and all of the js dependencies
+ 5. Set the active project to cpb-redditVue.app project, run, and browse to the root URL
 
- N.B.: Please note that to get oauth to work locally, a custom appId / secret will need to be supplied via appsettings.json
+ N.B.: Please note that to get oauth to work locally, a custom appId / secret will need to be generated on the Reddit site, and saved to appsettings.json
 
 ## Running Tests
 
